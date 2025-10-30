@@ -1,0 +1,120 @@
+.wrapper {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(./beletageImages/zala.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.header {
+    flex: 0 0 150px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+    padding-right: 20px;}
+.header ul {
+    list-style: none;
+    display: flex;
+    gap:20px;
+    margin: 0;
+    padding: 0;
+}   
+
+.header  li {
+    float: right;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s
+}
+
+li:hover {background-color: rgb(187, 154, 177)}
+
+.content {
+    flex:8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+
+.title {
+    font-size: xxx-large;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.contact {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-right: 8px;
+    transform: translateY(-50%); 
+}
+
+.footer {
+    flex: 0 0 auto;
+    text-align: center;
+    padding: 2px;
+}
+
+
+
+
+
+.menu {
+    width: 100px;
+    padding: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.menu:hover {
+    background-color:rgb(187, 154, 177)}
+
+.wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); /* darkens the image slightly */
+    z-index: 0;
+}
+
+.wrapper > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; } 
+    to { opacity: 1; } 
+}
+
+
+@media (max-width: 799px) {
+    .header {
+        justify-content: center;
+    }
+
+    .header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .menu {
+        width: 80px;
+        font-size: 0.9rem;
+    }
+}
